@@ -13,7 +13,7 @@ Automatically collect reconnaissance data, correlate intelligence using AI, calc
 
 # 🎬 Live Demo
 
-The following demo showcases the complete execution of the AI Security Reconnaissance Agent.
+The following demo showcases the complete execution of the AI Security Reconnaissance Agent..
 
 <p align="center">
   <img src="Screenshots/demo.gif" alt="Workflow Demo" width="1000">

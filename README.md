@@ -16,7 +16,7 @@ Automatically collect reconnaissance data, correlate intelligence using AI, calc
 The following demo showcases the complete execution of the AI Security Reconnaissance Agent.
 
 <p align="center">
-  <img src="Screenshots/AI Agent demo.gif" alt="Workflow Demo" width="1000">
+  <img src="Screenshots/demo.gif" alt="Workflow Demo" width="1000">
 </p>
 
 ---
@@ -37,30 +37,29 @@ This project demonstrates how modern AI can be integrated into cybersecurity aut
 
 # ✨ Features
 
-* 🤖 AI-powered reconnaissance analysis
-* 🌍 Multi-source OSINT intelligence collection
-* 🌐 WHOIS lookup
-* 📡 DNS Enumeration
-
-  * A Records
-  * MX Records
-  * TXT Records
-  * NS Records
-* 🛡️ VirusTotal intelligence
-* 🔍 Shodan integration
-* 🌎 Censys search
-* 🚨 AlienVault OTX lookup
-* 🔗 URLScan analysis
-* 📊 AI-generated Risk Score
-* 📝 Executive Summary
-* 💡 AI-generated Recommendations
-* 📄 HTML Report
-* 📑 PDF Report
-* 📘 Markdown Report
-* 📦 JSON Report
-* ☁️ Google Drive Upload
-* 💬 Discord Notification
-* ⚡ Fully automated workflow using n8n
+- 🤖 AI-powered reconnaissance analysis
+- 🌍 Multi-source OSINT intelligence collection
+- 🌐 WHOIS lookup
+- 📡 DNS Enumeration
+  - A Records
+  - MX Records
+  - TXT Records
+  - NS Records
+- 🛡️ VirusTotal intelligence
+- 🔍 Shodan integration
+- 🌎 Censys search
+- 🚨 AlienVault OTX lookup
+- 🔗 URLScan analysis
+- 📊 AI-generated Risk Score
+- 📝 Executive Summary
+- 💡 AI-generated Recommendations
+- 📄 HTML Report
+- 📑 PDF Report
+- 📘 Markdown Report
+- 📦 JSON Report
+- ☁️ Google Drive Upload
+- 💬 Discord Notification
+- ⚡ Fully automated workflow using n8n
 
 ---
 
@@ -103,21 +102,21 @@ This project demonstrates how modern AI can be integrated into cybersecurity aut
 
 # 🛠️ Technology Stack
 
-| Category              | Technology          |
-| --------------------- | ------------------- |
-| Workflow Automation   | n8n                 |
-| AI Analysis           | OpenAI GPT-4.1 Mini |
-| Programming           | JavaScript          |
-| WHOIS                 | API Ninjas          |
-| DNS                   | Google Public DNS   |
-| Threat Intelligence   | VirusTotal          |
-| Internet Intelligence | Shodan              |
-| Search Engine         | Censys              |
-| Threat Intelligence   | AlienVault OTX      |
-| URL Intelligence      | URLScan             |
-| PDF Generation        | PDFShift            |
-| Cloud Storage         | Google Drive        |
-| Notifications         | Discord             |
+| Category | Technology |
+|----------|------------|
+| Workflow Automation | n8n |
+| AI Analysis | OpenAI GPT-4.1 Mini |
+| Programming | JavaScript |
+| WHOIS | API Ninjas |
+| DNS | Google Public DNS |
+| Threat Intelligence | VirusTotal |
+| Internet Intelligence | Shodan |
+| Search Engine | Censys |
+| Threat Intelligence | AlienVault OTX |
+| URL Intelligence | URLScan |
+| PDF Generation | PDFShift |
+| Cloud Storage | Google Drive |
+| Notifications | Discord |
 
 ---
 
@@ -142,7 +141,7 @@ ai-agent-reconn/
 │   └── README.md
 │
 ├── Screenshots/
-│   ├── AI Agent demo.gif
+│   ├── demo.gif
 │   ├── 01-workflow-overview.png
 │   ├── 02-recon-pipeline.png
 │   ├── 03-intelligence-ai.png
@@ -155,9 +154,10 @@ ai-agent-reconn/
 │   ├── 10-discord-notification.png
 │   └── README.md
 │
-|
+├── CHANGELOG.md
 ├── LICENSE
 └── README.md
+```
 
 ---
 
@@ -192,26 +192,26 @@ The automation performs the following operations:
 
 Each execution automatically generates:
 
-* HTML Report
-* PDF Report
-* Markdown Report
-* JSON Report
+- HTML Report
+- PDF Report
+- Markdown Report
+- JSON Report
 
 Every report includes:
 
-* Executive Summary
-* Risk Score
-* AI Analysis
-* DNS Information
-* WHOIS Details
-* Threat Intelligence
-* Security Findings
-* Recommendations
+- Executive Summary
+- Risk Score
+- AI Analysis
+- DNS Information
+- WHOIS Details
+- Threat Intelligence
+- Security Findings
+- Recommendations
 
 ## Sample Reports
 
 <p align="center">
-  <img src="Screenshots/06-html-report-part2.png" width="48%" alt="HTML Report">
+  <img src="Screenshots/06-html-report-part1.png" width="48%" alt="HTML Report">
   <img src="Screenshots/08-pdf-report.png" width="48%" alt="PDF Report">
 </p>
 
@@ -239,16 +239,16 @@ Execute the workflow.
 
 Configure the following services inside n8n:
 
-* OpenAI
-* API Ninjas
-* VirusTotal
-* Shodan
-* Censys
-* AlienVault OTX
-* URLScan
-* Google Drive
-* Discord
-* PDFShift
+- OpenAI
+- API Ninjas
+- VirusTotal
+- Shodan
+- Censys
+- AlienVault OTX
+- URLScan
+- Google Drive
+- Discord
+- PDFShift
 
 > No credentials or API keys are included in this repository.
 
@@ -258,15 +258,15 @@ Configure the following services inside n8n:
 
 This project helped me gain hands-on experience with:
 
-* Security Automation
-* AI-assisted Security Analysis
-* Workflow Orchestration
-* OSINT Collection
-* API Integration
-* Threat Intelligence
-* Report Automation
-* Cloud Integrations
-* n8n Development
+- Security Automation
+- AI-assisted Security Analysis
+- Workflow Orchestration
+- OSINT Collection
+- API Integration
+- Threat Intelligence
+- Report Automation
+- Cloud Integrations
+- n8n Development
 
 ---
 
@@ -274,16 +274,16 @@ This project helped me gain hands-on experience with:
 
 Planned improvements include:
 
-* Web dashboard
-* Authentication
-* Scheduled scans
-* Email report delivery
-* IOC enrichment
-* CVE intelligence
-* SIEM integration
-* Docker deployment
-* Scan history database
-* Multi-user support
+- Web dashboard
+- Authentication
+- Scheduled scans
+- Email report delivery
+- IOC enrichment
+- CVE intelligence
+- SIEM integration
+- Docker deployment
+- Scan history database
+- Multi-user support
 
 ---
 
@@ -316,6 +316,3 @@ See the LICENSE file for more information.
 Cybersecurity • SOC • Penetration Testing • Security Automation • AI Agents • n8n
 
 ⭐ If you found this project useful, consider giving it a star.
-
----
-

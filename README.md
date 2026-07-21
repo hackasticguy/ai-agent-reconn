@@ -217,6 +217,16 @@ Every report includes:
 
 ---
 
+## 📢 Discord Notification
+
+After the reports are generated and uploaded, the workflow automatically sends a notification to Discord with the scan summary and report links.
+
+<p align="center">
+  <img src="Screenshots/10-discord-notification.png" alt="Discord Notification" width="700">
+</p>
+
+---
+
 # 🚀 Installation
 
 Clone the repository

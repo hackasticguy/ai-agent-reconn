@@ -1,0 +1,1128 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Recon Report - hackthebox.com</title>
+<style>
+
+body{
+    font-family:Segoe UI,Arial,sans-serif;
+    margin:35px;
+    color:#1f2937;
+    background:#f8fafc;
+}
+
+.report-header{
+    background:#0f172a;
+    color:white;
+    padding:30px;
+    border-radius:12px;
+    margin-bottom:25px;
+}
+
+.report-title{
+    font-size:32px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#cbd5e1;
+    font-size:15px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.card h2{
+    margin-top:0;
+    color:#0f172a;
+    border-bottom:2px solid #e5e7eb;
+    padding-bottom:8px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#1e3a8a;
+    color:white;
+}
+
+th,td{
+    border:1px solid #d1d5db;
+    padding:10px;
+}
+
+.risk-badge{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:25px;
+    color:white;
+    font-weight:bold;
+}
+
+.footer{
+    margin-top:40px;
+    text-align:center;
+    color:#6b7280;
+    font-size:12px;}
+
+    .dashboard{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin-bottom:25px;
+}
+
+.metric{
+background:white;
+padding:18px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.metric h3{
+margin:0;
+font-size:14px;
+color:#64748b;
+}
+
+.metric p{
+font-size:22px;
+font-weight:bold;
+margin:8px 0 0;
+}
+
+.finding-card{
+background:#ffffff;
+border:1px solid #dbe4ef;
+border-radius:12px;
+padding:22px;
+margin-bottom:22px;
+box-shadow:0 4px 12px rgba(15,23,42,.06);
+}
+
+.finding-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:18px;
+}
+
+.finding-name{
+font-size:20px;
+font-weight:700;
+color:#0f172a;
+}
+
+.finding-section{
+margin-top:15px;
+}
+
+.finding-label{
+font-size:13px;
+font-weight:700;
+letter-spacing:.5px;
+text-transform:uppercase;
+color:#2563eb;
+margin-bottom:8px;
+}
+
+.finding-text{
+line-height:1.8;
+font-size:15px;
+color:#374151;
+}
+</style>
+
+<div class="report-header">
+
+<div class="report-title">
+AI Security Reconnaissance Report
+</div>
+
+<div class="subtitle">
+Professional Security Assessment Report
+</div>
+
+<br>
+
+<b>Target:</b> hackthebox.com<br>
+<b>Scan ID:</b> 62<br>
+<b>Scanned:</b> 2026-07-21T05:33:51.324Z
+
+<br><br>
+
+<span class="risk-badge"
+style="background:#16a34a;">
+
+Low
+(10)
+
+</span>
+
+</div>
+
+<div class="dashboard">
+
+<div class="metric">
+<h3>Overall Risk</h3>
+<p><span style="
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    color:#fff;
+    background:#16a34a;
+    font-weight:600;
+    font-size:13px;
+  ">Low</span></p>
+</div>
+
+<div class="metric">
+<h3>WHOIS</h3>
+<p><span style="
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    color:#fff;
+    background:#16a34a;
+    font-weight:600;
+    font-size:13px;
+  ">Available</span></p>
+</div>
+
+<div class="metric">
+<h3>VirusTotal</h3>
+<p><span style="
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    color:#fff;
+    background:#16a34a;
+    font-weight:600;
+    font-size:13px;
+  ">Clean</span></p>
+</div>
+
+<div class="metric">
+<h3>A Records</h3>
+<p>2</p>
+</div>
+
+<div class="metric">
+<h3>OTX Threat Intel</h3>
+<p><span style="
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    color:#fff;
+    background:#2563eb;
+    font-weight:600;
+    font-size:13px;
+  ">2 Pulses</span></p>
+</div>
+
+<div class="metric">
+<h3>URLScan</h3>
+<p><span style="
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    color:#fff;
+    background:#16a34a;
+    font-weight:600;
+    font-size:13px;
+  ">Available</span></p>
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Executive Summary</h2>
+
+<div style="
+display:grid;
+grid-template-columns:240px 1fr;
+gap:30px;
+align-items:start;
+">
+
+<div style="
+background:#f8fafc;
+padding:20px;
+border-radius:10px;
+border:1px solid #e5e7eb;
+">
+
+<h3 style="
+margin-top:0;
+color:#1e3a8a;
+">
+Assessment
+</h3>
+
+<p style="margin-bottom:8px;"><b>Risk Level</b></p>
+
+<span style="
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    color:#fff;
+    background:#16a34a;
+    font-weight:600;
+    font-size:13px;
+  ">Low</span>
+
+<br><br>
+
+<p style="margin-bottom:8px;"><b>Risk Score</b></p>
+
+<div style="
+font-size:42px;
+font-weight:bold;
+color:#16a34a;
+">
+10
+</div>
+
+<hr style="margin:20px 0">
+
+<p><b>Scan ID</b></p>
+<p>62</p>
+
+<p><b>Generated</b></p>
+<p>21 Jul 2026, 05:33</p>
+
+</div>
+
+<div>
+
+<h3 style="
+margin-top:0;
+color:#1e3a8a;
+">
+Executive Overview
+</h3>
+
+<p style="
+line-height:1.8;
+text-align:justify;
+">
+
+The domain hackthebox.com is a well-established and reputable domain with proper DNS configurations, valid SSL/TLS certificates, and no malicious detections in threat intelligence sources. However, some minor concerns related to email security and URL reputation were identified that warrant attention to maintain security posture.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Target Overview</h2>
+
+<table>
+
+<tr>
+<th width="30%">Property</th>
+<th>Value</th>
+</tr>
+
+<tr>
+<td><b>Target</b></td>
+<td>hackthebox.com</td>
+</tr>
+
+<tr>
+<td><b>Root Domain</b></td>
+<td>hackthebox.com</td>
+</tr>
+
+<tr>
+<td><b>Assessment Type</b></td>
+<td>url</td>
+</tr>
+
+<tr>
+<td><b>Scan ID</b></td>
+<td>62</td>
+</tr>
+
+<tr>
+<td><b>Scan Time</b></td>
+<td>2026-07-21T05:33:51.324Z</td>
+</tr>
+
+<tr>
+<td><b>Registrar</b></td>
+<td>amazon registrar, inc.</td>
+</tr>
+
+<tr>
+<td><b>DNSSEC</b></td>
+<td>signeddelegation</td>
+</tr>
+
+<tr>
+<td><b>Country</b></td>
+<td>us</td>
+</tr>
+
+<tr>
+<td><b>Name Servers</b></td>
+<td>
+
+jill.ns.cloudflare.com<br>cody.ns.cloudflare.com
+
+</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>WHOIS Information</h2>
+
+<table>
+
+<tr>
+<th width="30%">Field</th>
+<th>Value</th>
+</tr>
+
+<tr>
+<td><b>Registrar</b></td>
+<td>amazon registrar, inc.</td>
+</tr>
+
+<tr>
+<td><b>Registrar URL</b></td>
+<td>http://registrar.amazon.com</td>
+</tr>
+
+<tr>
+<td><b>WHOIS Server</b></td>
+<td>whois.registrar.amazon</td>
+</tr>
+
+<tr>
+<td><b>DNSSEC</b></td>
+<td>signeddelegation</td>
+</tr>
+
+<tr>
+<td><b>Registrant</b></td>
+<td>on behalf of hackthebox.com owner</td>
+</tr>
+
+<tr>
+<td><b>Organization</b></td>
+<td>c/o whoisproxy.com</td>
+</tr>
+
+<tr>
+<td><b>Country</b></td>
+<td>US</td>
+</tr>
+
+<tr>
+<td><b>City</b></td>
+<td>alexandria</td>
+</tr>
+
+<tr>
+<td><b>State</b></td>
+<td>va</td>
+</tr>
+
+<tr>
+<td><b>Name Servers</b></td>
+<td>jill.ns.cloudflare.com<br>cody.ns.cloudflare.com</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>DNS Records</h2>
+
+<h3>A Records</h3>
+
+<table>
+
+<tr>
+<th>IP Address</th>
+<th>TTL</th>
+</tr>
+
+
+<tr>
+<td>109.176.239.69</td>
+<td>300</td>
+</tr>
+
+<tr>
+<td>109.176.239.70</td>
+<td>300</td>
+</tr>
+
+
+</table>
+
+<br>
+
+<h3>MX Records</h3>
+
+<table>
+
+<tr>
+<th>Mail Server</th>
+<th>Priority / TTL</th>
+</tr>
+
+
+<tr>
+<td>5 alt1.aspmx.l.google.com.</td>
+<td>3600</td>
+</tr>
+
+<tr>
+<td>10 alt3.aspmx.l.google.com.</td>
+<td>3600</td>
+</tr>
+
+<tr>
+<td>5 alt2.aspmx.l.google.com.</td>
+<td>3600</td>
+</tr>
+
+<tr>
+<td>10 alt4.aspmx.l.google.com.</td>
+<td>3600</td>
+</tr>
+
+<tr>
+<td>1 aspmx.l.google.com.</td>
+<td>3600</td>
+</tr>
+
+
+</table>
+
+<br>
+
+<h3>NS Records</h3>
+
+<table>
+
+<tr>
+<th>Name Server</th>
+<th>TTL</th>
+</tr>
+
+
+<tr>
+<td>jill.ns.cloudflare.com.</td>
+<td>21600</td>
+</tr>
+
+<tr>
+<td>cody.ns.cloudflare.com.</td>
+<td>21600</td>
+</tr>
+
+
+</table>
+
+<br>
+
+<h3>TXT Records</h3>
+
+<table>
+
+<tr>
+<th>TXT Value</th>
+</tr>
+
+
+<tr>
+<td>google-site-verification=VdT_w4v3nriJ_MIknhzw01nVw10T_DFVf3JP8yVD1C8</td>
+</tr>
+
+<tr>
+<td>brevo-code:293be74b395c496ce75d12a22ce91aee</td>
+</tr>
+
+<tr>
+<td>atlassian-sending-domain-verification=469d03af-e04b-4609-a67a-0c4161077605</td>
+</tr>
+
+<tr>
+<td>oneuptime-verification-gKfEKTDuakVmbIHNRkpU</td>
+</tr>
+
+<tr>
+<td>facebook-domain-verification=2ic10ka7c5jbl7ou7nva60919jn15w</td>
+</tr>
+
+<tr>
+<td>apple-domain-verification=nJdetwYEnUhgLT8W</td>
+</tr>
+
+<tr>
+<td>v=spf1 include:_u.hackthebox.com._spf.smart.ondmarc.com ~all</td>
+</tr>
+
+<tr>
+<td>1password-site-verification=4ZZGMSMKHBCCTHWRCUW5TEFLCA</td>
+</tr>
+
+<tr>
+<td>atlassian-domain-verification=BOEsvQIaiNXegte2TKsFBSjaCETV5f2f7rvcTiirvI/v9l56nU97DGOQfJIXWJJN</td>
+</tr>
+
+<tr>
+<td>figma-domain-verification=d1cdada4c1c15f86d6b7cc65fbd95c5e34502a4c8bb6950368a680433f521c02-1763047074</td>
+</tr>
+
+<tr>
+<td>google-site-verification=p8Ke_ETLIL22PW1uxiNOfE_-hLZ2LQd9KmdQS9bARa8</td>
+</tr>
+
+<tr>
+<td>slack-domain-verification=XJrLipfXUDw7kCGV5rK68GS1d92cVqE51H4UZ6fP</td>
+</tr>
+
+<tr>
+<td>google-site-verification=5Zgk1p8QogX_Q_WaZ3PNUx0jaBMcR2CXXD1SYeHk_uM</td>
+</tr>
+
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>VirusTotal Analysis</h2>
+
+<table>
+
+<tr>
+<th width="35%">Metric</th>
+<th>Value</th>
+</tr>
+
+<tr>
+<td><b>Harmless</b></td>
+<td>58</td>
+</tr>
+
+<tr>
+<td><b>Malicious</b></td>
+<td>0</td>
+</tr>
+
+<tr>
+<td><b>Suspicious</b></td>
+<td>0</td>
+</tr>
+
+<tr>
+<td><b>Undetected</b></td>
+<td>33</td>
+</tr>
+
+<tr>
+<td><b>Timeout</b></td>
+<td>0</td>
+</tr>
+
+<tr>
+<td><b>Registrar</b></td>
+<td>Amazon Registrar, Inc.</td>
+</tr>
+
+<tr>
+<td><b>HTTPS Certificate Issuer</b></td>
+<td>Google Trust Services</td>
+</tr>
+
+<tr>
+<td><b>Certificate Valid Until</b></td>
+<td>2026-10-08 05:31:53</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>URLScan Analysis</h2>
+
+<table>
+
+<tr>
+<th width="35%">Field</th>
+<th>Value</th>
+</tr>
+
+<tr>
+<td><b>Scan Result</b></td>
+<td>https://urlscan.io/api/v1/result/019f80b8-1cd4-712a-9ceb-c46dc9bca897/</td>
+</tr>
+
+<tr>
+<td><b>Screenshot</b></td>
+<td>https://urlscan.io/screenshots/019f80b8-1cd4-712a-9ceb-c46dc9bca897.png</td>
+</tr>
+
+<tr>
+<td><b>Visibility</b></td>
+<td>-</td>
+</tr>
+
+<tr>
+<td><b>Task UUID</b></td>
+<td>019f80b8-1cd4-712a-9ceb-c46dc9bca897</td>
+</tr>
+
+<tr>
+<td><b>Scan Time</b></td>
+<td>2026-07-20T18:09:48.887Z</td>
+</tr>
+
+<tr>
+<td><b>Method</b></td>
+<td>api</td>
+</tr>
+
+<tr>
+<td><b>Domain</b></td>
+<td>www.hackthebox.com</td>
+</tr>
+
+<tr>
+<td><b>IP Address</b></td>
+<td>109.176.239.69</td>
+</tr>
+
+<tr>
+<td><b>Country</b></td>
+<td>GB</td>
+</tr>
+
+<tr>
+<td><b>Server</b></td>
+<td>cloudflare</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>🛡 Security Findings</h2>
+
+
+
+<div class="finding-card"
+style="border-left:6px solid #2563eb;">
+
+<div class="finding-top">
+
+<div class="finding-name">
+
+<span style="
+color:#2563eb;
+font-size:22px;
+margin-right:8px;
+">
+🛡
+</span>
+
+<span style="
+color:#2563eb;
+font-weight:700;
+">
+Domain Registration
+</span>
+
+</div>
+
+<span style="
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    color:#fff;
+    background:#16a34a;
+    font-weight:600;
+    font-size:13px;
+  ">LOW</span>
+
+</div>
+
+<div class="finding-section">
+
+<div class="finding-label">
+Evidence
+</div>
+
+<div class="finding-text">
+Domain hackthebox.com is registered with Amazon Registrar, Inc. since 2010-03-18 and is set to expire in 2027-03-18. The domain status is clientTransferProhibited.
+</div>
+
+</div>
+
+<div class="finding-section">
+
+<div class="finding-label">
+Impact
+</div>
+
+<div class="finding-text">
+The domain is stable and protected against unauthorized transfers, reducing risk of domain hijacking.
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="finding-card"
+style="border-left:6px solid #06b6d4;">
+
+<div class="finding-top">
+
+<div class="finding-name">
+
+<span style="
+color:#06b6d4;
+font-size:22px;
+margin-right:8px;
+">
+🌐
+</span>
+
+<span style="
+color:#06b6d4;
+font-weight:700;
+">
+DNS Configuration
+</span>
+
+</div>
+
+<span style="
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    color:#fff;
+    background:#16a34a;
+    font-weight:600;
+    font-size:13px;
+  ">LOW</span>
+
+</div>
+
+<div class="finding-section">
+
+<div class="finding-label">
+Evidence
+</div>
+
+<div class="finding-text">
+DNS records show two A records (109.176.239.69, 109.176.239.70), MX records pointing to Google mail servers, and DNSSEC is enabled with signed delegation.
+</div>
+
+</div>
+
+<div class="finding-section">
+
+<div class="finding-label">
+Impact
+</div>
+
+<div class="finding-text">
+Proper DNS configuration and DNSSEC reduce risk of DNS spoofing and improve domain trustworthiness.
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="finding-card"
+style="border-left:6px solid #7c3aed;">
+
+<div class="finding-top">
+
+<div class="finding-name">
+
+<span style="
+color:#7c3aed;
+font-size:22px;
+margin-right:8px;
+">
+🔒
+</span>
+
+<span style="
+color:#7c3aed;
+font-weight:700;
+">
+SSL/TLS Certificate
+</span>
+
+</div>
+
+<span style="
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    color:#fff;
+    background:#16a34a;
+    font-weight:600;
+    font-size:13px;
+  ">LOW</span>
+
+</div>
+
+<div class="finding-section">
+
+<div class="finding-label">
+Evidence
+</div>
+
+<div class="finding-text">
+The SSL certificate for hackthebox.com is valid until 2026-10-08, issued by Google Trust Services, uses strong signature algorithm (ECDSA with secp256r1), and supports server authentication.
+</div>
+
+</div>
+
+<div class="finding-section">
+
+<div class="finding-label">
+Impact
+</div>
+
+<div class="finding-text">
+Valid and strong SSL/TLS certificates ensure secure encrypted communications and protect against man-in-the-middle attacks.
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="finding-card"
+style="border-left:6px solid #dc2626;">
+
+<div class="finding-top">
+
+<div class="finding-name">
+
+<span style="
+color:#dc2626;
+font-size:22px;
+margin-right:8px;
+">
+🦠
+</span>
+
+<span style="
+color:#dc2626;
+font-weight:700;
+">
+Threat Intelligence
+</span>
+
+</div>
+
+<span style="
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    color:#fff;
+    background:#16a34a;
+    font-weight:600;
+    font-size:13px;
+  ">LOW</span>
+
+</div>
+
+<div class="finding-section">
+
+<div class="finding-label">
+Evidence
+</div>
+
+<div class="finding-text">
+VirusTotal and other threat intelligence sources report no malicious or suspicious detections for hackthebox.com. Last analysis shows 0 malicious and 0 suspicious votes.
+</div>
+
+</div>
+
+<div class="finding-section">
+
+<div class="finding-label">
+Impact
+</div>
+
+<div class="finding-text">
+The domain is not currently associated with malicious activities, reducing risk of compromise or reputation damage.
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="finding-card"
+style="border-left:6px solid #ea580c;">
+
+<div class="finding-top">
+
+<div class="finding-name">
+
+<span style="
+color:#ea580c;
+font-size:22px;
+margin-right:8px;
+">
+📧
+</span>
+
+<span style="
+color:#ea580c;
+font-weight:700;
+">
+Email Security
+</span>
+
+</div>
+
+<span style="
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    color:#fff;
+    background:#ca8a04;
+    font-weight:600;
+    font-size:13px;
+  ">MEDIUM</span>
+
+</div>
+
+<div class="finding-section">
+
+<div class="finding-label">
+Evidence
+</div>
+
+<div class="finding-text">
+The domain's SPF record is 'v=spf1 include:_u.hackthebox.com._spf.smart.ondmarc.com ~all' which uses a soft fail (~all) mechanism.
+</div>
+
+</div>
+
+<div class="finding-section">
+
+<div class="finding-label">
+Impact
+</div>
+
+<div class="finding-text">
+Soft fail SPF may allow some spoofed emails to pass SPF checks, increasing risk of phishing or spoofing attacks targeting the domain.
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="finding-card"
+style="border-left:6px solid #16a34a;">
+
+<div class="finding-top">
+
+<div class="finding-name">
+
+<span style="
+color:#16a34a;
+font-size:22px;
+margin-right:8px;
+">
+🌍
+</span>
+
+<span style="
+color:#16a34a;
+font-weight:700;
+">
+URL Reputation
+</span>
+
+</div>
+
+<span style="
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    color:#fff;
+    background:#ca8a04;
+    font-weight:600;
+    font-size:13px;
+  ">MEDIUM</span>
+
+</div>
+
+<div class="finding-section">
+
+<div class="finding-label">
+Evidence
+</div>
+
+<div class="finding-text">
+URLScan.io data shows multiple subdomains and URLs related to hackthebox.com with high traffic and legitimate content. However, some URLs (e.g., hacktheboxltd.sjv.io) redirect off-domain and may be used in affiliate or tracking campaigns.
+</div>
+
+</div>
+
+<div class="finding-section">
+
+<div class="finding-label">
+Impact
+</div>
+
+<div class="finding-text">
+Off-domain redirects and affiliate links may be abused by attackers for phishing or malware distribution if not properly monitored.
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+<h2>Remediation Recommendations</h2><ul><li>Update SPF record to use a hard fail (-all) instead of soft fail (~all) to improve email spoofing protection.</li><li>Continuously monitor URLs and subdomains for suspicious redirects or phishing attempts.</li><li>Maintain regular renewal and strong configuration of SSL/TLS certificates.</li><li>Ensure DNSSEC is fully deployed and monitored for integrity.</li><li>Keep domain registration details up to date and monitor for unauthorized changes.</li></ul><h2>Correlation Notes</h2><p>The domain's DNS configuration, SSL/TLS certificate, and threat intelligence data collectively indicate a legitimate and secure domain. The email security finding correlates with the SPF record configuration, suggesting a potential vector for spoofing. URL reputation findings highlight the need to monitor external redirects related to the domain to prevent abuse.</p><hr><p style="font-size:12px;color:#888;">Generated by AI Security Recon Agent — authorized assessments only.</p></body></html>
